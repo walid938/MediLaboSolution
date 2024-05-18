@@ -28,12 +28,12 @@ public class Patient {
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
     @ManyToOne
-    @Column(name = "gender_id")
+    @JoinColumn(name = "gender_id")
     private Gender gender;
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Adress adress;
-    @JoinColumn(referencedColumnName = "phone_number")
+    @Column(name= "phone_number")
     private String phoneNumber;
 
 
